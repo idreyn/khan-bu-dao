@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+
+  "name": "Khan-China-Static",
+  "description": "Replace kastatic with our own servers",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icons/enabled.png"
+  },
+
+  "background": {
+    "scripts": ["background.js", "parse-uri.js", "tabs.js"],
+    "persistent": true
+  },
+
+  "permissions": [
+    "activeTab",
+    "background",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.khanacademy.org/",
+    "*://khanacademy.org/",
+    "*://*.kastatic.org/",
+    "*://kastatic.org/",
+    "*://*.khanacademy.org/*",
+    "*://khanacademy.org/*",
+    "*://*.kastatic.org/*",
+    "*://kastatic.org/*",
+    "*://*.google-analytics.com/*",
+    "*://google-analytics.com/*",
+    "*://*.google.com/*",
+    "*://google.com/*",
+    "*://khan-static.oss-cn-shanghai.aliyuncs.com/*"
+  ]
+}
